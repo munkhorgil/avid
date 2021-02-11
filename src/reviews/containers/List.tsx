@@ -24,7 +24,6 @@ function ListContainer(props: Props) {
     reviews: customizeList(data.data || [])
   };
 
-
   return <List {...updatedProps} />;
 }
 

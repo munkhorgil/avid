@@ -53,7 +53,6 @@ function Detail({ review = {} as Review, history, isLoading }: Props) {
           {renderRow('Country', review.review_country)}
           {renderRow('Total comments', review.total_comments)}
           {renderRow('Helpful count', review.helpful_count)}
-          {renderRow('Url', review.url)}
           <Table.Row>
             <Table.TextCell>URL</Table.TextCell>
             <Table.TextCell>
