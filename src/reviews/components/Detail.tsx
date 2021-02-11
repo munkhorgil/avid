@@ -21,7 +21,7 @@ function Detail({ review = {} as Review, history, isLoading }: Props) {
         <Table.TextCell>
           {label}
         </Table.TextCell>
-        <Table.TextCell>
+        <Table.TextCell width={600}>
           {value}
         </Table.TextCell>
       </Table.Row>
