@@ -1,6 +1,7 @@
 import React from "react";
 import { Pane, Spinner, BackButton, Table } from "evergreen-ui";
 import { Review } from "../../types";
+import { generateRatingIcons } from "./Item";
 
 type Props = {
   review?: Review;
@@ -52,6 +53,21 @@ function Detail({ review = {} as Review, history, isLoading }: Props) {
           {renderRow('Country', review.review_country)}
           {renderRow('Total comments', review.total_comments)}
           {renderRow('Helpful count', review.helpful_count)}
+          {renderRow('Url', review.url)}
+          <Table.Row>
+            <Table.TextCell>URL</Table.TextCell>
+            <Table.TextCell>
+              <a href={review.url} target="_blank" rel="noreferrer">
+                Click here
+              </a>
+            </Table.TextCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.TextCell>Rating</Table.TextCell>
+            <Table.HeaderCell>
+              {generateRatingIcons(review.review_rating)}
+            </Table.HeaderCell>
+          </Table.Row>
         </Table.Body>
       </Table>
     </Pane>
