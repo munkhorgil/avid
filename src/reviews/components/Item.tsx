@@ -40,7 +40,12 @@ function Item({ review }: Props) {
 
   return (
     <>
-      <Dialog isShown={isVisible} title="Review" hasFooter={false}>
+      <Dialog
+        isShown={isVisible}
+        title="Review"
+        hasFooter={false}
+        onCloseComplete={handleModal}
+      >
         {review.review_text}
       </Dialog>
       <Table.Row>
